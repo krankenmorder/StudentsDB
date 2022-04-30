@@ -18,14 +18,16 @@ namespace Students
         }
 
         private Button currentButton;
-        private void ActivateButton(object btnSender)
+        private Form activeForm;
+
+        // Анимация кнопок
+        private void ActivateButton(object btnSender, Color color)
         {
             if (btnSender != null)
             {
                 if (currentButton != (Button)btnSender)
                 {
                     DisableButton();
-                    Color color = Color.FromArgb(39, 39, 58);
                     currentButton = (Button)btnSender;
                     currentButton.BackColor = color;
                     currentButton.ForeColor = Color.White;
@@ -47,24 +49,48 @@ namespace Students
             }
         }
 
+        // Обработчики нажатия на кнопки
         private void btnDatabase_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            Color color = Color.Blue;
+            OpenChildForm(new Forms.FormDatabase(), sender, color);
         }
 
         private void btnAdd_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            Color color = Color.Green;
+            OpenChildForm(new Forms.FormAdd(), sender, color);
         }
 
         private void btnEdit_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            Color color = Color.Orange;
+            OpenChildForm(new Forms.FormEdit(), sender, color);
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
         {
-            ActivateButton(sender);
+            Color color = Color.Red;
+            OpenChildForm(new Forms.FormDelete(), sender, color);
+        }
+
+        // 
+
+        private void OpenChildForm(Form childForm, object btnSender, Color color)
+        {
+            if (activeForm != null)
+            {
+                activeForm.Close();
+            }
+            ActivateButton(btnSender, color); // Анимация кнопок
+            activeForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            this.panelBottom.Controls.Add(childForm);
+            this.panelBottom.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
         }
     }
 }

@@ -9,3 +9,7 @@ D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.csproj.
 D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.csproj.CoreCompileInputs.cache
 D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.exe
 D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.pdb
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Forms.FormDatabase.resources
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Forms.FormAdd.resources
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Forms.FormDelete.resources
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Forms.FormEdit.resources
