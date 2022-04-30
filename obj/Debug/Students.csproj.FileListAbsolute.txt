@@ -1,0 +1,11 @@
+D:\Microsoft Visual Studio\Projects\Students\Students\bin\Debug\Students.exe.config
+D:\Microsoft Visual Studio\Projects\Students\Students\bin\Debug\Students.exe
+D:\Microsoft Visual Studio\Projects\Students\Students\bin\Debug\Students.pdb
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.csproj.AssemblyReference.cache
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.csproj.SuggestedBindingRedirects.cache
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Form1.resources
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Properties.Resources.resources
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.csproj.GenerateResource.cache
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.csproj.CoreCompileInputs.cache
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.exe
+D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.pdb
