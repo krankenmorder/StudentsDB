@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
-using System.Data;
 using System.Drawing;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Configuration;
+using System.Data;
+using System.Data.SqlClient;
 
 namespace Students
 {
@@ -17,8 +19,28 @@ namespace Students
             InitializeComponent();
         }
 
+        // Поля
+
         private Button currentButton;
         private Form activeForm;
+        private SqlConnection sqlConnection = null;
+
+        private void Form1_Load(object sender, EventArgs e)
+        {
+            // Создание подключения к БД
+            sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Students"].ConnectionString);
+            sqlConnection.Open();
+            /* 
+            // Проверка подключения
+            if (sqlConnection.State == ConnectionState.Open)
+            {
+                MessageBox.Show("Подключение к БД установлено.");
+            }
+            */
+
+            // Нажатие на кнопку "База данных" при загрузке формы
+            btnDatabase.PerformClick();
+        }
 
         // Анимация кнопок
         private void ActivateButton(object btnSender, Color color)
@@ -35,7 +57,6 @@ namespace Students
                 }
             }
         }
-
         private void DisableButton()
         {
             foreach (Control previousBtn in panelMenu.Controls)
@@ -74,7 +95,7 @@ namespace Students
             OpenChildForm(new Forms.FormDelete(), sender, color);
         }
 
-        // 
+        // Отображение различных форм при нажатии на соответствующие кнопки
 
         private void OpenChildForm(Form childForm, object btnSender, Color color)
         {
@@ -92,5 +113,7 @@ namespace Students
             childForm.BringToFront();
             childForm.Show();
         }
+
+
     }
 }

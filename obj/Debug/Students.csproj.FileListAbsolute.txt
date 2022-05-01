@@ -13,3 +13,5 @@ D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Forms.F
 D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Forms.FormAdd.resources
 D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Forms.FormDelete.resources
 D:\Microsoft Visual Studio\Projects\Students\Students\obj\Debug\Students.Forms.FormEdit.resources
+D:\Microsoft Visual Studio\Projects\Students\Students\bin\Debug\Students.mdf
+D:\Microsoft Visual Studio\Projects\Students\Students\bin\Debug\Students_log.ldf
