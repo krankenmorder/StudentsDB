@@ -28,15 +28,14 @@ namespace Students
         private void Form1_Load(object sender, EventArgs e)
         {
             // Создание подключения к БД
-            sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Students"].ConnectionString);
+            sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
             sqlConnection.Open();
-            /* 
+
             // Проверка подключения
-            if (sqlConnection.State == ConnectionState.Open)
-            {
-                MessageBox.Show("Подключение к БД установлено.");
-            }
-            */
+            //if (sqlConnection.State == ConnectionState.Open)
+            //{
+            //    MessageBox.Show("Подключение к БД установлено.");
+            //}
 
             // Нажатие на кнопку "База данных" при загрузке формы
             btnDatabase.PerformClick();

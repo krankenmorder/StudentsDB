@@ -145,13 +145,14 @@
     <None Include="Resources\delete.png" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Students.mdf">
+    <Content Include="Database.mdf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
     </Content>
-    <Content Include="Students_log.ldf">
+    <Content Include="Database_log.ldf">
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
-      <DependentUpon>Students.mdf</DependentUpon>
+      <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\pen.png" />
   </ItemGroup>
   <ItemGroup>
     <BootstrapperPackage Include=".NETFramework,Version=v4.7.2">
