@@ -29,6 +29,13 @@
         private void InitializeComponent()
         {
             this.panelBoxes = new System.Windows.Forms.Panel();
+            this.rtbEmailAdd = new System.Windows.Forms.RichTextBox();
+            this.lblEmailAdd = new System.Windows.Forms.Label();
+            this.cbFormAdd = new System.Windows.Forms.ComboBox();
+            this.lblFormAdd = new System.Windows.Forms.Label();
+            this.lblGraduationAdd = new System.Windows.Forms.Label();
+            this.btnAddStudent = new System.Windows.Forms.Button();
+            this.lblPhoneAdd = new System.Windows.Forms.Label();
             this.lblGrAdd = new System.Windows.Forms.Label();
             this.rtbGrAdd = new System.Windows.Forms.RichTextBox();
             this.cbCourseAdd = new System.Windows.Forms.ComboBox();
@@ -47,28 +54,21 @@
             this.lblImAdd = new System.Windows.Forms.Label();
             this.rtbFamAdd = new System.Windows.Forms.RichTextBox();
             this.lblFamAdd = new System.Windows.Forms.Label();
-            this.lblPhoneAdd = new System.Windows.Forms.Label();
-            this.rtbPhoneAdd = new System.Windows.Forms.RichTextBox();
-            this.btnAddStudent = new System.Windows.Forms.Button();
-            this.lblGraduationAdd = new System.Windows.Forms.Label();
-            this.dtpGraduationAdd = new System.Windows.Forms.DateTimePicker();
-            this.lblFormAdd = new System.Windows.Forms.Label();
-            this.cbFormAdd = new System.Windows.Forms.ComboBox();
-            this.rtbEmailAdd = new System.Windows.Forms.RichTextBox();
-            this.lblEmailAdd = new System.Windows.Forms.Label();
+            this.mtbPhoneAdd = new System.Windows.Forms.MaskedTextBox();
+            this.mtbGraduationAdd = new System.Windows.Forms.MaskedTextBox();
             this.panelBoxes.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelBoxes
             // 
+            this.panelBoxes.Controls.Add(this.mtbGraduationAdd);
+            this.panelBoxes.Controls.Add(this.mtbPhoneAdd);
             this.panelBoxes.Controls.Add(this.rtbEmailAdd);
             this.panelBoxes.Controls.Add(this.lblEmailAdd);
             this.panelBoxes.Controls.Add(this.cbFormAdd);
             this.panelBoxes.Controls.Add(this.lblFormAdd);
             this.panelBoxes.Controls.Add(this.lblGraduationAdd);
-            this.panelBoxes.Controls.Add(this.dtpGraduationAdd);
             this.panelBoxes.Controls.Add(this.btnAddStudent);
-            this.panelBoxes.Controls.Add(this.rtbPhoneAdd);
             this.panelBoxes.Controls.Add(this.lblPhoneAdd);
             this.panelBoxes.Controls.Add(this.lblGrAdd);
             this.panelBoxes.Controls.Add(this.rtbGrAdd);
@@ -94,6 +94,91 @@
             this.panelBoxes.Size = new System.Drawing.Size(1008, 204);
             this.panelBoxes.TabIndex = 1;
             // 
+            // rtbEmailAdd
+            // 
+            this.rtbEmailAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rtbEmailAdd.Location = new System.Drawing.Point(856, 86);
+            this.rtbEmailAdd.Name = "rtbEmailAdd";
+            this.rtbEmailAdd.Size = new System.Drawing.Size(140, 33);
+            this.rtbEmailAdd.TabIndex = 22;
+            this.rtbEmailAdd.Text = "";
+            // 
+            // lblEmailAdd
+            // 
+            this.lblEmailAdd.AutoSize = true;
+            this.lblEmailAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblEmailAdd.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblEmailAdd.Location = new System.Drawing.Point(673, 89);
+            this.lblEmailAdd.Name = "lblEmailAdd";
+            this.lblEmailAdd.Size = new System.Drawing.Size(73, 25);
+            this.lblEmailAdd.TabIndex = 26;
+            this.lblEmailAdd.Text = "E-mail:";
+            // 
+            // cbFormAdd
+            // 
+            this.cbFormAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.cbFormAdd.FormattingEnabled = true;
+            this.cbFormAdd.ItemHeight = 25;
+            this.cbFormAdd.Items.AddRange(new object[] {
+            "бюджетная",
+            "коммерция",
+            "целевая"});
+            this.cbFormAdd.Location = new System.Drawing.Point(856, 8);
+            this.cbFormAdd.Name = "cbFormAdd";
+            this.cbFormAdd.Size = new System.Drawing.Size(140, 33);
+            this.cbFormAdd.TabIndex = 25;
+            // 
+            // lblFormAdd
+            // 
+            this.lblFormAdd.AutoSize = true;
+            this.lblFormAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblFormAdd.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblFormAdd.Location = new System.Drawing.Point(673, 11);
+            this.lblFormAdd.Name = "lblFormAdd";
+            this.lblFormAdd.Size = new System.Drawing.Size(177, 25);
+            this.lblFormAdd.TabIndex = 24;
+            this.lblFormAdd.Text = "Форма обучения:";
+            // 
+            // lblGraduationAdd
+            // 
+            this.lblGraduationAdd.AutoSize = true;
+            this.lblGraduationAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblGraduationAdd.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblGraduationAdd.Location = new System.Drawing.Point(673, 50);
+            this.lblGraduationAdd.Name = "lblGraduationAdd";
+            this.lblGraduationAdd.Size = new System.Drawing.Size(132, 25);
+            this.lblGraduationAdd.TabIndex = 23;
+            this.lblGraduationAdd.Text = "Год выпуска:";
+            // 
+            // btnAddStudent
+            // 
+            this.btnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnAddStudent.FlatAppearance.BorderSize = 2;
+            this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnAddStudent.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnAddStudent.Image = global::Students.Properties.Resources.pen;
+            this.btnAddStudent.Location = new System.Drawing.Point(678, 125);
+            this.btnAddStudent.Name = "btnAddStudent";
+            this.btnAddStudent.Size = new System.Drawing.Size(318, 72);
+            this.btnAddStudent.TabIndex = 27;
+            this.btnAddStudent.Text = "Добавить студента";
+            this.btnAddStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnAddStudent.UseVisualStyleBackColor = false;
+            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
+            // 
+            // lblPhoneAdd
+            // 
+            this.lblPhoneAdd.AutoSize = true;
+            this.lblPhoneAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblPhoneAdd.ForeColor = System.Drawing.Color.Gainsboro;
+            this.lblPhoneAdd.Location = new System.Drawing.Point(12, 167);
+            this.lblPhoneAdd.Name = "lblPhoneAdd";
+            this.lblPhoneAdd.Size = new System.Drawing.Size(105, 25);
+            this.lblPhoneAdd.TabIndex = 19;
+            this.lblPhoneAdd.Text = "Телефон:";
+            // 
             // lblGrAdd
             // 
             this.lblGrAdd.AutoSize = true;
@@ -109,13 +194,16 @@
             // 
             this.rtbGrAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.rtbGrAdd.Location = new System.Drawing.Point(502, 164);
+            this.rtbGrAdd.MaxLength = 2;
             this.rtbGrAdd.Name = "rtbGrAdd";
             this.rtbGrAdd.Size = new System.Drawing.Size(140, 33);
             this.rtbGrAdd.TabIndex = 17;
             this.rtbGrAdd.Text = "";
+            this.rtbGrAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbGrAdd_KeyPress);
             // 
             // cbCourseAdd
             // 
+            this.cbCourseAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbCourseAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbCourseAdd.FormattingEnabled = true;
             this.cbCourseAdd.ItemHeight = 25;
@@ -137,13 +225,19 @@
             // 
             // cbLevelAdd
             // 
+            this.cbLevelAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbLevelAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbLevelAdd.FormattingEnabled = true;
             this.cbLevelAdd.ItemHeight = 25;
+            this.cbLevelAdd.Items.AddRange(new object[] {
+            "бакалавриат",
+            "специалитет",
+            "магистратура"});
             this.cbLevelAdd.Location = new System.Drawing.Point(502, 86);
             this.cbLevelAdd.Name = "cbLevelAdd";
             this.cbLevelAdd.Size = new System.Drawing.Size(140, 33);
             this.cbLevelAdd.TabIndex = 14;
+            this.cbLevelAdd.SelectedIndexChanged += new System.EventHandler(this.cbLevelAdd_SelectedIndexChanged);
             // 
             // lblLevelAdd
             // 
@@ -158,6 +252,7 @@
             // 
             // cbDirectionAdd
             // 
+            this.cbDirectionAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbDirectionAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbDirectionAdd.FormattingEnabled = true;
             this.cbDirectionAdd.ItemHeight = 25;
@@ -165,6 +260,7 @@
             this.cbDirectionAdd.Name = "cbDirectionAdd";
             this.cbDirectionAdd.Size = new System.Drawing.Size(140, 33);
             this.cbDirectionAdd.TabIndex = 12;
+            this.cbDirectionAdd.SelectedIndexChanged += new System.EventHandler(this.cbDirectionAdd_SelectedIndexChanged);
             // 
             // lblDirectionAdd
             // 
@@ -179,13 +275,22 @@
             // 
             // cbFacultyAdd
             // 
+            this.cbFacultyAdd.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.cbFacultyAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.cbFacultyAdd.FormattingEnabled = true;
             this.cbFacultyAdd.ItemHeight = 25;
+            this.cbFacultyAdd.Items.AddRange(new object[] {
+            "ФИРТ",
+            "АВИЭТ",
+            "ФАДЭТ",
+            "ИАТМ",
+            "ФЗЧС",
+            "ИНЭК"});
             this.cbFacultyAdd.Location = new System.Drawing.Point(502, 8);
             this.cbFacultyAdd.Name = "cbFacultyAdd";
             this.cbFacultyAdd.Size = new System.Drawing.Size(140, 33);
             this.cbFacultyAdd.TabIndex = 10;
+            this.cbFacultyAdd.SelectedIndexChanged += new System.EventHandler(this.cbFacultyAdd_SelectedIndexChanged);
             // 
             // lblBirthdayAdd
             // 
@@ -227,6 +332,7 @@
             this.rtbOtchAdd.Size = new System.Drawing.Size(140, 33);
             this.rtbOtchAdd.TabIndex = 5;
             this.rtbOtchAdd.Text = "";
+            this.rtbOtchAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbOtchAdd_KeyPress);
             // 
             // lblOtchAdd
             // 
@@ -247,6 +353,7 @@
             this.rtbImAdd.Size = new System.Drawing.Size(140, 33);
             this.rtbImAdd.TabIndex = 3;
             this.rtbImAdd.Text = "";
+            this.rtbImAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbImAdd_KeyPress);
             // 
             // lblImAdd
             // 
@@ -267,6 +374,7 @@
             this.rtbFamAdd.Size = new System.Drawing.Size(140, 33);
             this.rtbFamAdd.TabIndex = 1;
             this.rtbFamAdd.Text = "";
+            this.rtbFamAdd.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.rtbFamAdd_KeyPress);
             // 
             // lblFamAdd
             // 
@@ -279,104 +387,23 @@
             this.lblFamAdd.TabIndex = 0;
             this.lblFamAdd.Text = "Фамилия:";
             // 
-            // lblPhoneAdd
+            // mtbPhoneAdd
             // 
-            this.lblPhoneAdd.AutoSize = true;
-            this.lblPhoneAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblPhoneAdd.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblPhoneAdd.Location = new System.Drawing.Point(12, 167);
-            this.lblPhoneAdd.Name = "lblPhoneAdd";
-            this.lblPhoneAdd.Size = new System.Drawing.Size(105, 25);
-            this.lblPhoneAdd.TabIndex = 19;
-            this.lblPhoneAdd.Text = "Телефон:";
+            this.mtbPhoneAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mtbPhoneAdd.Location = new System.Drawing.Point(185, 163);
+            this.mtbPhoneAdd.Mask = "+7(999)999-99-99";
+            this.mtbPhoneAdd.Name = "mtbPhoneAdd";
+            this.mtbPhoneAdd.Size = new System.Drawing.Size(140, 32);
+            this.mtbPhoneAdd.TabIndex = 28;
             // 
-            // rtbPhoneAdd
+            // mtbGraduationAdd
             // 
-            this.rtbPhoneAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbPhoneAdd.Location = new System.Drawing.Point(185, 164);
-            this.rtbPhoneAdd.Name = "rtbPhoneAdd";
-            this.rtbPhoneAdd.Size = new System.Drawing.Size(140, 33);
-            this.rtbPhoneAdd.TabIndex = 20;
-            this.rtbPhoneAdd.Text = "";
-            // 
-            // btnAddStudent
-            // 
-            this.btnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnAddStudent.FlatAppearance.BorderSize = 2;
-            this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddStudent.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAddStudent.Image = global::Students.Properties.Resources.pen;
-            this.btnAddStudent.Location = new System.Drawing.Point(678, 125);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(318, 72);
-            this.btnAddStudent.TabIndex = 21;
-            this.btnAddStudent.Text = "Добавить студента";
-            this.btnAddStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddStudent.UseVisualStyleBackColor = false;
-            // 
-            // lblGraduationAdd
-            // 
-            this.lblGraduationAdd.AutoSize = true;
-            this.lblGraduationAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblGraduationAdd.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblGraduationAdd.Location = new System.Drawing.Point(673, 50);
-            this.lblGraduationAdd.Name = "lblGraduationAdd";
-            this.lblGraduationAdd.Size = new System.Drawing.Size(146, 25);
-            this.lblGraduationAdd.TabIndex = 23;
-            this.lblGraduationAdd.Text = "Дата выпуска:";
-            // 
-            // dtpGraduationAdd
-            // 
-            this.dtpGraduationAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.dtpGraduationAdd.Format = System.Windows.Forms.DateTimePickerFormat.Short;
-            this.dtpGraduationAdd.Location = new System.Drawing.Point(856, 47);
-            this.dtpGraduationAdd.Name = "dtpGraduationAdd";
-            this.dtpGraduationAdd.Size = new System.Drawing.Size(140, 32);
-            this.dtpGraduationAdd.TabIndex = 22;
-            this.dtpGraduationAdd.Value = new System.DateTime(2022, 5, 2, 0, 0, 0, 0);
-            // 
-            // lblFormAdd
-            // 
-            this.lblFormAdd.AutoSize = true;
-            this.lblFormAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblFormAdd.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblFormAdd.Location = new System.Drawing.Point(673, 11);
-            this.lblFormAdd.Name = "lblFormAdd";
-            this.lblFormAdd.Size = new System.Drawing.Size(177, 25);
-            this.lblFormAdd.TabIndex = 24;
-            this.lblFormAdd.Text = "Форма обучения:";
-            // 
-            // cbFormAdd
-            // 
-            this.cbFormAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.cbFormAdd.FormattingEnabled = true;
-            this.cbFormAdd.ItemHeight = 25;
-            this.cbFormAdd.Location = new System.Drawing.Point(856, 8);
-            this.cbFormAdd.Name = "cbFormAdd";
-            this.cbFormAdd.Size = new System.Drawing.Size(140, 33);
-            this.cbFormAdd.TabIndex = 25;
-            // 
-            // rtbEmailAdd
-            // 
-            this.rtbEmailAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbEmailAdd.Location = new System.Drawing.Point(856, 86);
-            this.rtbEmailAdd.Name = "rtbEmailAdd";
-            this.rtbEmailAdd.Size = new System.Drawing.Size(140, 33);
-            this.rtbEmailAdd.TabIndex = 27;
-            this.rtbEmailAdd.Text = "";
-            // 
-            // lblEmailAdd
-            // 
-            this.lblEmailAdd.AutoSize = true;
-            this.lblEmailAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblEmailAdd.ForeColor = System.Drawing.Color.Gainsboro;
-            this.lblEmailAdd.Location = new System.Drawing.Point(673, 89);
-            this.lblEmailAdd.Name = "lblEmailAdd";
-            this.lblEmailAdd.Size = new System.Drawing.Size(73, 25);
-            this.lblEmailAdd.TabIndex = 26;
-            this.lblEmailAdd.Text = "E-mail:";
+            this.mtbGraduationAdd.Font = new System.Drawing.Font("Microsoft Sans Serif", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.mtbGraduationAdd.Location = new System.Drawing.Point(856, 47);
+            this.mtbGraduationAdd.Mask = "2\\000";
+            this.mtbGraduationAdd.Name = "mtbGraduationAdd";
+            this.mtbGraduationAdd.Size = new System.Drawing.Size(140, 32);
+            this.mtbGraduationAdd.TabIndex = 29;
             // 
             // FormAdd
             // 
@@ -387,6 +414,7 @@
             this.Controls.Add(this.panelBoxes);
             this.Name = "FormAdd";
             this.Text = "FormAdd";
+            this.Load += new System.EventHandler(this.FormAdd_Load);
             this.panelBoxes.ResumeLayout(false);
             this.panelBoxes.PerformLayout();
             this.ResumeLayout(false);
@@ -413,14 +441,14 @@
         private System.Windows.Forms.Label lblCourseAdd;
         private System.Windows.Forms.Label lblGrAdd;
         private System.Windows.Forms.RichTextBox rtbGrAdd;
-        private System.Windows.Forms.RichTextBox rtbPhoneAdd;
         private System.Windows.Forms.Label lblPhoneAdd;
         private System.Windows.Forms.Label lblGraduationAdd;
-        private System.Windows.Forms.DateTimePicker dtpGraduationAdd;
         private System.Windows.Forms.Button btnAddStudent;
         private System.Windows.Forms.RichTextBox rtbEmailAdd;
         private System.Windows.Forms.Label lblEmailAdd;
         private System.Windows.Forms.ComboBox cbFormAdd;
         private System.Windows.Forms.Label lblFormAdd;
+        private System.Windows.Forms.MaskedTextBox mtbPhoneAdd;
+        private System.Windows.Forms.MaskedTextBox mtbGraduationAdd;
     }
 }

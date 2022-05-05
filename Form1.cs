@@ -31,11 +31,11 @@ namespace Students
             sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
             sqlConnection.Open();
 
-            // Проверка подключения
-            //if (sqlConnection.State == ConnectionState.Open)
-            //{
-            //    MessageBox.Show("Подключение к БД установлено.");
-            //}
+            //Проверка подключения
+            if (sqlConnection.State == ConnectionState.Open)
+            {
+                MessageBox.Show("Подключение к БД установлено.");
+            }
 
             // Нажатие на кнопку "База данных" при загрузке формы
             btnDatabase.PerformClick();
