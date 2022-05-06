@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.panelDB_Edit = new System.Windows.Forms.Panel();
+            this.dgvDB_Edit = new System.Windows.Forms.DataGridView();
             this.panelBoxesEdit = new System.Windows.Forms.Panel();
             this.rtbGrEdit = new System.Windows.Forms.RichTextBox();
             this.mtbGraduationEdit = new System.Windows.Forms.MaskedTextBox();
@@ -57,10 +58,9 @@
             this.lblCourseEdit = new System.Windows.Forms.Label();
             this.lblLevelEdit = new System.Windows.Forms.Label();
             this.cbLevelEdit = new System.Windows.Forms.ComboBox();
-            this.dgvDB_Edit = new System.Windows.Forms.DataGridView();
             this.panelDB_Edit.SuspendLayout();
-            this.panelBoxesEdit.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDB_Edit)).BeginInit();
+            this.panelBoxesEdit.SuspendLayout();
             this.SuspendLayout();
             // 
             // panelDB_Edit
@@ -71,6 +71,20 @@
             this.panelDB_Edit.Name = "panelDB_Edit";
             this.panelDB_Edit.Size = new System.Drawing.Size(1008, 460);
             this.panelDB_Edit.TabIndex = 1;
+            // 
+            // dgvDB_Edit
+            // 
+            this.dgvDB_Edit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDB_Edit.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDB_Edit.Location = new System.Drawing.Point(0, 0);
+            this.dgvDB_Edit.Name = "dgvDB_Edit";
+            this.dgvDB_Edit.ReadOnly = true;
+            this.dgvDB_Edit.RowHeadersWidth = 62;
+            this.dgvDB_Edit.RowTemplate.Height = 28;
+            this.dgvDB_Edit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
+            this.dgvDB_Edit.Size = new System.Drawing.Size(1008, 460);
+            this.dgvDB_Edit.TabIndex = 0;
+            this.dgvDB_Edit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDB_Edit_CellClick);
             // 
             // panelBoxesEdit
             // 
@@ -268,6 +282,7 @@
             // btnEditStudent
             // 
             this.btnEditStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnEditStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEditStudent.FlatAppearance.BorderSize = 2;
             this.btnEditStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEditStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -418,20 +433,6 @@
             this.cbLevelEdit.TabIndex = 14;
             this.cbLevelEdit.SelectedIndexChanged += new System.EventHandler(this.cbLevelEdit_SelectedIndexChanged);
             // 
-            // dgvDB_Edit
-            // 
-            this.dgvDB_Edit.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDB_Edit.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDB_Edit.Location = new System.Drawing.Point(0, 0);
-            this.dgvDB_Edit.Name = "dgvDB_Edit";
-            this.dgvDB_Edit.ReadOnly = true;
-            this.dgvDB_Edit.RowHeadersWidth = 62;
-            this.dgvDB_Edit.RowTemplate.Height = 28;
-            this.dgvDB_Edit.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvDB_Edit.Size = new System.Drawing.Size(1008, 460);
-            this.dgvDB_Edit.TabIndex = 0;
-            this.dgvDB_Edit.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDB_Edit_CellClick);
-            // 
             // FormEdit
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -444,9 +445,9 @@
             this.Text = "FormEdit";
             this.Load += new System.EventHandler(this.FormEdit_Load);
             this.panelDB_Edit.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvDB_Edit)).EndInit();
             this.panelBoxesEdit.ResumeLayout(false);
             this.panelBoxesEdit.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvDB_Edit)).EndInit();
             this.ResumeLayout(false);
 
         }

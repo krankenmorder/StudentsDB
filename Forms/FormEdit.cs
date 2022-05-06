@@ -25,6 +25,12 @@ namespace Students.Forms
 
         private void btnEditStudent_Click(object sender, EventArgs e)
         {
+            if (rtbFamEdit.Text == "" || rtbImEdit.Text == "" || dtpBirthdayEdit.Text == "" || cbFacultyEdit.Text == "" || cbDirectionEdit.Text == "" || cbLevelEdit.Text == "" || cbCourseEdit.Text == "" || rtbGrEdit.Text == "" || cbFormEdit.Text == "" || mtbGraduationEdit.Text == "" || mtbPhoneEdit.Text == "")
+            {
+                MessageBox.Show("Заполните все поля формы!");
+                return;
+            }
+
             //Fam, Im, Otch, Birthday, Faculty, Direction, Level, Course, Gr, Form, Graduation, Phone, Email
             SqlCommand command = new SqlCommand($"UPDATE [Students] SET [Fam] = @Fam, [Im] = @Im, [Otch] = @Otch, [Birthday] = @Birthday, [Faculty] = @Faculty, [Direction] = @Direction, [Level] = @Level, [Course] = @Course, [Gr] = @Gr, [Form] = @Form, [Graduation] = @Graduation, [Phone] = @Phone, [Email] = @Email " +
                 $"WHERE Id={idEdit}", sqlConnection);

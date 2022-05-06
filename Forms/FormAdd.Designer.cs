@@ -292,6 +292,7 @@
             // btnAddStudent
             // 
             this.btnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnAddStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAddStudent.FlatAppearance.BorderSize = 2;
             this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));

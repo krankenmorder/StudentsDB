@@ -65,6 +65,7 @@ namespace Students.Forms
             command.Parameters.AddWithValue("Email", rtbEmailAdd.Text);
 
             command.ExecuteNonQuery();
+            MessageBox.Show("Студент добавлен в БД.");
 
             SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Students", sqlConnection);
             DataSet dataset = new DataSet();

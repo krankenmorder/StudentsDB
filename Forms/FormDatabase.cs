@@ -41,10 +41,6 @@ namespace Students.Forms
             }
         }
 
-        private void btnAddStudent_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void rtbFamFind_KeyPress(object sender, KeyPressEventArgs e)
         {

@@ -29,9 +29,9 @@
         private void InitializeComponent()
         {
             this.panelButtonDelete = new System.Windows.Forms.Panel();
+            this.btnDeleteStudent = new System.Windows.Forms.Button();
             this.panelDB_Delete = new System.Windows.Forms.Panel();
             this.dgvDB_Delete = new System.Windows.Forms.DataGridView();
-            this.btnAddStudent = new System.Windows.Forms.Button();
             this.panelButtonDelete.SuspendLayout();
             this.panelDB_Delete.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDB_Delete)).BeginInit();
@@ -39,12 +39,32 @@
             // 
             // panelButtonDelete
             // 
-            this.panelButtonDelete.Controls.Add(this.btnAddStudent);
+            this.panelButtonDelete.Controls.Add(this.btnDeleteStudent);
             this.panelButtonDelete.Dock = System.Windows.Forms.DockStyle.Bottom;
             this.panelButtonDelete.Location = new System.Drawing.Point(0, 592);
             this.panelButtonDelete.Name = "panelButtonDelete";
             this.panelButtonDelete.Size = new System.Drawing.Size(1008, 72);
             this.panelButtonDelete.TabIndex = 1;
+            // 
+            // btnDeleteStudent
+            // 
+            this.btnDeleteStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(60)))), ((int)(((byte)(60)))), ((int)(((byte)(89)))));
+            this.btnDeleteStudent.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeleteStudent.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.btnDeleteStudent.FlatAppearance.BorderSize = 2;
+            this.btnDeleteStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeleteStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnDeleteStudent.ForeColor = System.Drawing.Color.Gainsboro;
+            this.btnDeleteStudent.Image = global::Students.Properties.Resources.clear;
+            this.btnDeleteStudent.Location = new System.Drawing.Point(0, 0);
+            this.btnDeleteStudent.Name = "btnDeleteStudent";
+            this.btnDeleteStudent.Size = new System.Drawing.Size(1008, 72);
+            this.btnDeleteStudent.TabIndex = 28;
+            this.btnDeleteStudent.Text = "    Удалить студента";
+            this.btnDeleteStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            this.btnDeleteStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.btnDeleteStudent.UseVisualStyleBackColor = false;
+            this.btnDeleteStudent.Click += new System.EventHandler(this.btnDeleteStudent_Click);
             // 
             // panelDB_Delete
             // 
@@ -69,25 +89,6 @@
             this.dgvDB_Delete.TabIndex = 0;
             this.dgvDB_Delete.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvDB_Delete_CellClick);
             // 
-            // btnAddStudent
-            // 
-            this.btnAddStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
-            this.btnAddStudent.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.btnAddStudent.FlatAppearance.BorderSize = 2;
-            this.btnAddStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAddStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.btnAddStudent.ForeColor = System.Drawing.Color.Gainsboro;
-            this.btnAddStudent.Image = global::Students.Properties.Resources.clear;
-            this.btnAddStudent.Location = new System.Drawing.Point(0, 0);
-            this.btnAddStudent.Name = "btnAddStudent";
-            this.btnAddStudent.Size = new System.Drawing.Size(1008, 72);
-            this.btnAddStudent.TabIndex = 28;
-            this.btnAddStudent.Text = "    Удалить студента";
-            this.btnAddStudent.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
-            this.btnAddStudent.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.btnAddStudent.UseVisualStyleBackColor = false;
-            this.btnAddStudent.Click += new System.EventHandler(this.btnAddStudent_Click);
-            // 
             // FormDelete
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 20F);
@@ -111,6 +112,6 @@
         private System.Windows.Forms.Panel panelButtonDelete;
         private System.Windows.Forms.Panel panelDB_Delete;
         private System.Windows.Forms.DataGridView dgvDB_Delete;
-        private System.Windows.Forms.Button btnAddStudent;
+        private System.Windows.Forms.Button btnDeleteStudent;
     }
 }

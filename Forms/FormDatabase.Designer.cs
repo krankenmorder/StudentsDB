@@ -52,13 +52,13 @@
             this.lblFamFind = new System.Windows.Forms.Label();
             this.btnFindStudent = new System.Windows.Forms.Button();
             this.panelBoxesFind = new System.Windows.Forms.Panel();
-            this.panelDB_Find = new System.Windows.Forms.Panel();
-            this.dgvDB_Find = new System.Windows.Forms.DataGridView();
+            this.rtbPhoneFind = new System.Windows.Forms.RichTextBox();
+            this.rtbBirthdayFind = new System.Windows.Forms.RichTextBox();
             this.rtbGraduationFind = new System.Windows.Forms.RichTextBox();
             this.lblPhoneFind = new System.Windows.Forms.Label();
             this.lblBirthdayFind = new System.Windows.Forms.Label();
-            this.rtbBirthdayFind = new System.Windows.Forms.RichTextBox();
-            this.rtbPhoneFind = new System.Windows.Forms.RichTextBox();
+            this.panelDB_Find = new System.Windows.Forms.Panel();
+            this.dgvDB_Find = new System.Windows.Forms.DataGridView();
             this.panelBoxesFind.SuspendLayout();
             this.panelDB_Find.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvDB_Find)).BeginInit();
@@ -311,6 +311,7 @@
             // btnFindStudent
             // 
             this.btnFindStudent.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(51)))), ((int)(((byte)(76)))));
+            this.btnFindStudent.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnFindStudent.FlatAppearance.BorderSize = 2;
             this.btnFindStudent.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnFindStudent.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
@@ -361,25 +362,25 @@
             this.panelBoxesFind.Size = new System.Drawing.Size(1008, 204);
             this.panelBoxesFind.TabIndex = 57;
             // 
-            // panelDB_Find
+            // rtbPhoneFind
             // 
-            this.panelDB_Find.Controls.Add(this.dgvDB_Find);
-            this.panelDB_Find.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panelDB_Find.Location = new System.Drawing.Point(0, 0);
-            this.panelDB_Find.Name = "panelDB_Find";
-            this.panelDB_Find.Size = new System.Drawing.Size(1008, 460);
-            this.panelDB_Find.TabIndex = 58;
+            this.rtbPhoneFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rtbPhoneFind.Location = new System.Drawing.Point(185, 164);
+            this.rtbPhoneFind.MaxLength = 16;
+            this.rtbPhoneFind.Name = "rtbPhoneFind";
+            this.rtbPhoneFind.Size = new System.Drawing.Size(140, 33);
+            this.rtbPhoneFind.TabIndex = 59;
+            this.rtbPhoneFind.Text = "";
             // 
-            // dgvDB_Find
+            // rtbBirthdayFind
             // 
-            this.dgvDB_Find.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvDB_Find.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.dgvDB_Find.Location = new System.Drawing.Point(0, 0);
-            this.dgvDB_Find.Name = "dgvDB_Find";
-            this.dgvDB_Find.RowHeadersWidth = 62;
-            this.dgvDB_Find.RowTemplate.Height = 28;
-            this.dgvDB_Find.Size = new System.Drawing.Size(1008, 460);
-            this.dgvDB_Find.TabIndex = 0;
+            this.rtbBirthdayFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.rtbBirthdayFind.Location = new System.Drawing.Point(185, 125);
+            this.rtbBirthdayFind.MaxLength = 10;
+            this.rtbBirthdayFind.Name = "rtbBirthdayFind";
+            this.rtbBirthdayFind.Size = new System.Drawing.Size(140, 33);
+            this.rtbBirthdayFind.TabIndex = 58;
+            this.rtbBirthdayFind.Text = "";
             // 
             // rtbGraduationFind
             // 
@@ -413,25 +414,25 @@
             this.lblBirthdayFind.TabIndex = 38;
             this.lblBirthdayFind.Text = "Дата рождения:";
             // 
-            // rtbBirthdayFind
+            // panelDB_Find
             // 
-            this.rtbBirthdayFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbBirthdayFind.Location = new System.Drawing.Point(185, 125);
-            this.rtbBirthdayFind.MaxLength = 10;
-            this.rtbBirthdayFind.Name = "rtbBirthdayFind";
-            this.rtbBirthdayFind.Size = new System.Drawing.Size(140, 33);
-            this.rtbBirthdayFind.TabIndex = 58;
-            this.rtbBirthdayFind.Text = "";
+            this.panelDB_Find.Controls.Add(this.dgvDB_Find);
+            this.panelDB_Find.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panelDB_Find.Location = new System.Drawing.Point(0, 0);
+            this.panelDB_Find.Name = "panelDB_Find";
+            this.panelDB_Find.Size = new System.Drawing.Size(1008, 460);
+            this.panelDB_Find.TabIndex = 58;
             // 
-            // rtbPhoneFind
+            // dgvDB_Find
             // 
-            this.rtbPhoneFind.Font = new System.Drawing.Font("Microsoft Sans Serif", 10F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.rtbPhoneFind.Location = new System.Drawing.Point(185, 164);
-            this.rtbPhoneFind.MaxLength = 16;
-            this.rtbPhoneFind.Name = "rtbPhoneFind";
-            this.rtbPhoneFind.Size = new System.Drawing.Size(140, 33);
-            this.rtbPhoneFind.TabIndex = 59;
-            this.rtbPhoneFind.Text = "";
+            this.dgvDB_Find.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dgvDB_Find.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dgvDB_Find.Location = new System.Drawing.Point(0, 0);
+            this.dgvDB_Find.Name = "dgvDB_Find";
+            this.dgvDB_Find.RowHeadersWidth = 62;
+            this.dgvDB_Find.RowTemplate.Height = 28;
+            this.dgvDB_Find.Size = new System.Drawing.Size(1008, 460);
+            this.dgvDB_Find.TabIndex = 0;
             // 
             // FormDatabase
             // 

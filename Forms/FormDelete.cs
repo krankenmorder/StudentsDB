@@ -31,19 +31,27 @@ namespace Students.Forms
             dgvDB_Delete.DataSource = dataset.Tables[0];
         }
 
-        private void btnAddStudent_Click(object sender, EventArgs e)
+        private void btnDeleteStudent_Click(object sender, EventArgs e)
         {
-            SqlCommand sqlCommand = new SqlCommand($"DELETE [Students] Where Id={idDelete}", sqlConnection);
-
-            if (sqlCommand.ExecuteNonQuery() == 1)
+            DialogResult dialogResult = MessageBox.Show("Вы уверены?", "Удаление студента из БД", MessageBoxButtons.YesNo);
+            if (dialogResult == DialogResult.Yes)
             {
-                MessageBox.Show("Студент удалён из БД.");
-            }
+                SqlCommand command = new SqlCommand($"DELETE [Students] Where Id={idDelete}", sqlConnection);
 
-            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Students", sqlConnection);
-            DataSet dataset = new DataSet();
-            dataAdapter.Fill(dataset);
-            dgvDB_Delete.DataSource = dataset.Tables[0];
+                if (command.ExecuteNonQuery() == 1)
+                {
+                    MessageBox.Show("Студент удалён из БД.");
+                }
+
+                SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Students", sqlConnection);
+                DataSet dataset = new DataSet();
+                dataAdapter.Fill(dataset);
+                dgvDB_Delete.DataSource = dataset.Tables[0];
+            }
+            else if (dialogResult == DialogResult.No)
+            {
+                
+            }
         }
 
         private void dgvDB_Delete_CellClick(object sender, DataGridViewCellEventArgs e)
