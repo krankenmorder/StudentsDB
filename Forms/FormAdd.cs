@@ -25,6 +25,11 @@ namespace Students.Forms
         {
             sqlConnection = new SqlConnection(ConfigurationManager.ConnectionStrings["Database"].ConnectionString);
             sqlConnection.Open();
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Students", sqlConnection);
+            DataSet dataset = new DataSet();
+            dataAdapter.Fill(dataset);
+            dgvDB_Add.DataSource = dataset.Tables[0];
         }
 
         void CheckLetters(KeyPressEventArgs e) //Проверка на буквы русского алфавита
@@ -38,6 +43,11 @@ namespace Students.Forms
 
         private void btnAddStudent_Click(object sender, EventArgs e)
         {
+            if (rtbFamAdd.Text == "" || rtbImAdd.Text == "" || dtpBirthdayAdd.Text == "" || cbFacultyAdd.Text == "" || cbDirectionAdd.Text == "" || cbLevelAdd.Text == "" || cbCourseAdd.Text == "" || rtbGrAdd.Text == "" || cbFormAdd.Text == "" || mtbGraduationAdd.Text == "" || mtbPhoneAdd.Text == "")
+            {
+                MessageBox.Show("Заполните все поля формы!");
+                return;
+            }
             SqlCommand command = new SqlCommand($"INSERT INTO [Students] (Fam, Im, Otch, Birthday, Faculty, Direction, Level, Course, Gr, Form, Graduation, Phone, Email) VALUES (@Fam, @Im, @Otch, @Birthday, @Faculty, @Direction, @Level, @Course, @Gr, @Form, @Graduation, @Phone, @Email)", sqlConnection);
 
             command.Parameters.AddWithValue("Fam", rtbFamAdd.Text);
@@ -55,6 +65,11 @@ namespace Students.Forms
             command.Parameters.AddWithValue("Email", rtbEmailAdd.Text);
 
             command.ExecuteNonQuery();
+
+            SqlDataAdapter dataAdapter = new SqlDataAdapter("SELECT * FROM Students", sqlConnection);
+            DataSet dataset = new DataSet();
+            dataAdapter.Fill(dataset);
+            dgvDB_Add.DataSource = dataset.Tables[0];
         }
 
         private void rtbFamAdd_KeyPress(object sender, KeyPressEventArgs e)

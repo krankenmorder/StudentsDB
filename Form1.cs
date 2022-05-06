@@ -107,8 +107,8 @@ namespace Students
             childForm.TopLevel = false;
             childForm.FormBorderStyle = FormBorderStyle.None;
             childForm.Dock = DockStyle.Fill;
-            this.panelBottom.Controls.Add(childForm);
-            this.panelBottom.Tag = childForm;
+            this.panelForms.Controls.Add(childForm);
+            this.panelForms.Tag = childForm;
             childForm.BringToFront();
             childForm.Show();
         }

@@ -152,6 +152,8 @@
       <CopyToOutputDirectory>Always</CopyToOutputDirectory>
       <DependentUpon>Database.mdf</DependentUpon>
     </Content>
+    <None Include="Resources\clear.png" />
+    <None Include="Resources\find.png" />
     <None Include="Resources\pen.png" />
   </ItemGroup>
   <ItemGroup>
